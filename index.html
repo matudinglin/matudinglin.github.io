@@ -313,7 +313,7 @@ representation, ray tracing and path tracing, animation and simulation.
               <div class="one">
                 <div class="two" id='csci520_image'>
                   <img src='images/csci520_after.gif' height="160" width="160" style="object-fit: cover;"></div>
-                  <img src='images/csci520_before.gif' height="160" width="160" style="object-fit: fill;">
+                  <img src='images/csci520_before.gif' height="160" width="160" style="object-fit: cover;">
               </div>
               <script type="text/javascript">
                 function csci520_start() {
@@ -340,6 +340,43 @@ representation, ray tracing and path tracing, animation and simulation.
               </p>
             </td>
           </tr>		
+          
+          <tr onmouseout="csci526_stop()" onmouseover="csci526_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='csci526_image'>
+                  <img src='images/csci526_after.png' height="160" width="160" style="object-fit: scale-down;"></div>
+                  <img src='images/csci526_before.png' height="160" width="160" style="object-fit: scale-down;">
+              </div>
+              <script type="text/javascript">
+                function csci526_start() {
+                  document.getElementById('csci526_image').style.opacity = "1";
+                }
+
+                function csci526_stop() {
+                  document.getElementById('csci526_image').style.opacity = "0";
+                }
+                csci526_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://viterbi-web.usc.edu/~jbarbic/cs520-s23/">
+                <papertitle>A 2D Platformer Game from CSCI526: Crazy Jack</papertitle>
+              </a>
+              <br>
+                Team Leader; 2023
+              <br>
+                <a href="https://zhengyuwu0924.github.io/CSCI526_GroupAnxiety_Project/Play/Final">Play Our Game</a> &nbsp/&nbsp
+                <a href="https://github.com/matudinglin/Crazy-Jack">Github</a> &nbsp/&nbsp
+                <a href="https://www.youtube.com/watch?v=LWYz-JTAXvM&t=23s">Presentation Video</a>
+              <p></p>
+              <p>
+                Crazy Jack is a 2D Platformer with innovative drawing and painting mechanics.
+              </p>
+            </td>
+          </tr>
+
+
 
           <!-- List End -->
         </tbody></table>
