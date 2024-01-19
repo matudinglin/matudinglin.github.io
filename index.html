@@ -373,7 +373,39 @@ representation, ray tracing and path tracing, animation and simulation.
               </p>
             </td>
           </tr>
+        
+          <tr onmouseout="games103_stop()" onmouseover="games103_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='games103_image'>
+                  <img src='images/games103_after.gif' height="160" width="160" style="object-fit: cover;"></div>
+                  <img src='images/games103_before.gif' height="160" width="160" style="object-fit: cover;">
+              </div>
+              <script type="text/javascript">
+                function games103_start() {
+                  document.getElementById('games103_image').style.opacity = "1";
+                }
 
+                function games103_stop() {
+                  document.getElementById('games103_image').style.opacity = "0";
+                }
+                games103_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://github.com/matudinglin/Physics-Based-Animation-Projects">
+                <papertitle>Projects from GAMES103: Physics-Based Animation</papertitle>
+              </a>
+              <br>
+                Independent Project; 2024
+              <br>
+                <a href="https://github.com/matudinglin/Physics-Based-Animation-Projects">Github</a>
+              <p></p>
+              <p>
+                Some interesting projects related to physics based animation. Including Rigid Body Dynamics, Cloth Simulation, Finite Element Method(FEM) and Fluid Simulation.
+              </p>
+            </td>
+          </tr>	
 
 
           <!-- List End -->
