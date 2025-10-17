@@ -29,9 +29,6 @@
               </p>
               <p>I am a computer science master student at <a href="https://www.usc.edu/">Universit of Southern California</a>. My interests include VR/AR, Software Development, Computer Graphics, Visualization and Game Development.
               </p>
-              <p>
-                Fight On!!!
-              </p>
               <p style="text-align:center">
                 <a href="mailto:matudinglin@gmail.com">Email</a> &nbsp/&nbsp
                 <a href="data/resume.pdf">Resume</a> &nbsp/&nbsp
@@ -268,7 +265,7 @@
               <p></p>
               <p>
                 Some interesting projects related to computer graphics. Including shading pipeline, geometric
-representation, ray tracing and path tracing, animation and simulation.
+                representation, ray tracing and path tracing, animation and simulation.
               </p>
             </td>
           </tr>		
@@ -435,24 +432,24 @@ representation, ray tracing and path tracing, animation and simulation.
             </td>
           </tr>
         </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
-
-        <!-- -------- -->
-        <!-- -Credit- -->
-        <!-- -------- -->
-        </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-            <td style="padding:0px">
-              <br>
-              <p style="text-align:center;font-size:small;">
-                Thanks to this beautiful <a href="http://jonbarron.info">template</a>!
-              </p>
-            </td>
-          </tr>
-        </tbody></table>
-
+        <p id="last-updated" style="text-align:center;font-size:0.9em;color:#666;margin-top:6px;"></p>
+        <script type="text/javascript">
+          (function(){
+            var el = document.getElementById('last-updated');
+            var lm = document.lastModified;
+            if (lm) {
+              var d = new Date(lm);
+              if (!isNaN(d.getTime())) {
+                el.textContent = 'Last updated: ' + d.toLocaleDateString();
+                return;
+              }
+            }
+            // fallback to current date if document.lastModified is not reliable
+            var t = new Date();
+            el.textContent = 'Last updated: ' + t.toLocaleDateString();
+          })();
+        </script>
 
       </td>
     </tr>
