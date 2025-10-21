@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <title>Photos - Yao Lin</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="author" content="Yao Lin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <!-- lightGallery CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery-bundle.min.css">
+</head>
+<body>
+  <div id="home"></div>
+  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <tr style="padding:0px">
+      <td style="padding:0px">
+
+        <!-- Primary navigation -->
+        <div class="nav-wrap">
+          <nav class="pill-nav" aria-label="Primary">
+            <a class="nav-link" href="index.html#home">Home</a>
+            <a class="nav-link" href="projects.html">Projects</a>
+            <a class="nav-link" href="hobby.html">Music</a>
+            <a class="nav-link active" href="photos.html">Photos</a>
+          </nav>
+        </div>
+
+        <!-- ======================================================= -->
+        <!--                          Photos                          -->
+        <!-- ======================================================= -->
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr>
+            <td style="padding:20px;width:100%;vertical-align:middle">
+              <heading>Photos</heading>
+              <p>Add images to the <code>photos/</code> folder and list file names in <code>photos/index.json</code>. The gallery below updates automatically.</p>
+            </td>
+          </tr>
+        </tbody></table>
+
+        <div id="lightgallery" class="gallery-grid" aria-label="Photo Gallery"></div>
+
+        <p id="photos-note" style="text-align:center;color:#666;margin-top:10px;">No photos yet. Add files to <code>photos/</code> and list them in <code>photos/index.json</code>.</p>
+
+        <!-- lightGallery JS -->
+        <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/lightgallery.umd.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/zoom/lg-zoom.umd.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/thumbnail/lg-thumbnail.umd.min.js"></script>
+
+        <script>
+          (function(){
+            var container = document.getElementById('lightgallery');
+            function build(items){
+              if(!Array.isArray(items) || items.length === 0){ return; }
+              document.getElementById('photos-note').style.display = 'none';
+              items.forEach(function(name){
+                var href = 'photos/' + name;
+                var a = document.createElement('a');
+                a.href = href;
+                a.setAttribute('data-lg-size', '1400-933');
+                var img = document.createElement('img');
+                img.src = href;
+                img.alt = name;
+                a.appendChild(img);
+                container.appendChild(a);
+              });
+              lightGallery(container, { plugins: [lgZoom, lgThumbnail], speed: 300 });
+            }
+            fetch('photos/index.json', {cache: 'no-store'})
+              .then(function(r){ return r.json(); })
+              .then(build)
+              .catch(function(){ /* ignore if file empty */ });
+          })();
+        </script>
+
+        <p id="last-updated" style="text-align:center;font-size:0.9em;color:#666;margin-top:6px;"></p>
+        <script type="text/javascript">
+          (function(){
+            var el = document.getElementById('last-updated');
+            var lm = document.lastModified;
+            if (lm) {
+              var d = new Date(lm);
+              if (!isNaN(d.getTime())) {
+                el.textContent = 'Last updated: ' + d.toLocaleDateString();
+                return;
+              }
+            }
+            var t = new Date();
+            el.textContent = 'Last updated: ' + t.toLocaleDateString();
+          })();
+        </script>
+
+      </td>
+    </tr>
+  </tbody></table>
+</body>
+</html>
+

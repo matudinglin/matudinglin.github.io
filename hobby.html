@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <title>Music - Yao Lin</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="author" content="Yao Lin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+<body>
+  <div id="home"></div>
+  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <tr style="padding:0px">
+      <td style="padding:0px">
+
+        <!-- Primary navigation -->
+        <div class="nav-wrap">
+          <nav class="pill-nav" aria-label="Primary">
+            <a class="nav-link" href="index.html#home">Home</a>
+            <a class="nav-link" href="projects.html">Projects</a>
+            <a class="nav-link active" href="hobby.html">Music</a>
+            <a class="nav-link" href="photos.html">Photos</a>
+          </nav>
+        </div>
+
+        <!-- ======================================================= -->
+        <!--                           Music                           -->
+        <!-- ======================================================= -->
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+            <td style="padding:20px;width:100%;vertical-align:middle">
+              <heading>Music</heading>
+              <p>
+
+                I love playing fingerstyle guitar. I love playing video games. I love working out and doing sports. I love science and arts.
+                <br>
+                <br>Some of my guitar covers:
+                <ul>
+                  <li><a href="https://www.youtube.com/watch?v=qi2FZvZTKas">Twilight - Kotaro Oshio (cover)</a></li>
+                  <li><a href="https://www.youtube.com/watch?v=tA8b-w8pfXA">Waltz for Rainy Day - Satoshi Gogo (cover)</a></li>
+                  <li><a href="https://www.youtube.com/watch?v=GOatTiVprhE">The Shine Of Silver Thaw - Masaaki Kishibe (cover)</a></li>
+                  <li><a href="https://www.youtube.com/watch?v=1Y54s-lYdEc">Childhood Dream - Masaaki Kishibe (cover)</a></li>
+                </ul>
+
+              </p>
+            </td>
+          </tr>
+        </tbody></table>
+
+        <p id="last-updated" style="text-align:center;font-size:0.9em;color:#666;margin-top:6px;"></p>
+        <script type="text/javascript">
+          (function(){
+            var el = document.getElementById('last-updated');
+            var lm = document.lastModified;
+            if (lm) {
+              var d = new Date(lm);
+              if (!isNaN(d.getTime())) {
+                el.textContent = 'Last updated: ' + d.toLocaleDateString();
+                return;
+              }
+            }
+            var t = new Date();
+            el.textContent = 'Last updated: ' + t.toLocaleDateString();
+          })();
+        </script>
+
+      </td>
+    </tr>
+  </tbody></table>
+</body>
+</html>
