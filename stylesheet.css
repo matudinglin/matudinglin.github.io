@@ -144,6 +144,7 @@ html {
 
 :root {
   --accent: #00bfa6; /* teal accent */
+  --edge-color: #F8F8F8; /* subtle mint edge */
 }
 
 .nav-wrap {
@@ -186,6 +187,28 @@ html {
 
 /* keep content visible under fixed nav */
 body { padding-top: 76px; }
+
+/* left/right colored sides (gutters) */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: max(0px, calc((100vw - 1100px)/2)); /* match content max width (800 + padding) */
+  background: var(--edge-color);
+  pointer-events: none; /* do not block interactions */
+  z-index: 0;
+}
+body::before { left: 0; }
+body::after  { right: 0; }
+
+/* ensure central content paints above side gutters */
+body > table {
+  position: relative;
+  z-index: 1;
+  background: #fff;
+}
 
 /* anchor offsets for smooth scroll targeting */
 #home, #about, #projects, #articles, #contact { scroll-margin-top: 84px; }
