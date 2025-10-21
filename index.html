@@ -13,6 +13,8 @@
 </head>
 
 <body>
+  <!-- anchors for top navigation -->
+  <div id="home"></div>
   <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
     <tr style="padding:0px">
       <td style="padding:0px">
@@ -21,6 +23,7 @@
         <!-- -------- -->
         <!-- Overview -->
         <!-- -------- -->
+        <div id="about"></div>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr style="padding:0px">
             <td style="padding:2.5%;width:63%;vertical-align:middle">
@@ -29,7 +32,7 @@
               </p>
               <p>I am a computer science master student at <a href="https://www.usc.edu/">Universit of Southern California</a>. My interests include VR/AR, Software Development, Computer Graphics, Visualization and Game Development.
               </p>
-              <p style="text-align:center">
+              <p id="contact" style="text-align:center">
                 <a href="mailto:matudinglin@gmail.com">Email</a> &nbsp/&nbsp
                 <a href="data/resume.pdf">Resume</a> &nbsp/&nbsp
                 <a href="data/Bio.txt">Bio</a> &nbsp/&nbsp
@@ -42,6 +45,17 @@
             </td>
           </tr>
         </tbody></table>
+
+        <!-- Primary navigation -->
+        <div class="nav-wrap">
+          <nav class="pill-nav" aria-label="Primary">
+            <a class="nav-link active" href="#home">Home</a>
+            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#projects">Projects</a>
+            <a class="nav-link" href="#articles">Articles</a>
+            <a class="nav-link" href="#contact">Contact</a>
+          </nav>
+        </div>
 
         <!--- -------- --->
         <!-- Experience -->
@@ -144,6 +158,7 @@
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
           <tr>
             <td>
+              <div id="articles"></div>
               <heading>Research & Development</heading>
             </td>
           </tr>
@@ -187,6 +202,7 @@
         <!--- -------- --->
         <!--  -Project -->
         <!--- -------- --->  
+        <div id="projects"></div>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr>
             <td style="padding:20px;width:100%;vertical-align:middle">

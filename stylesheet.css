@@ -136,3 +136,61 @@ name {
 span.highlight {
   background-color: #ffffd0;
 }
+
+/* --- Navigation (pill style) --- */
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --accent: #00bfa6; /* teal accent */
+}
+
+.nav-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 0; /* no layout gap; nav is fixed */
+  height: 0; /* keep wrapper from affecting flow */
+}
+
+.pill-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 28px;
+  padding: 12px 20px;
+  background: #ffffff;
+  border-radius: 9999px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+.pill-nav .nav-link {
+  color: #333;
+  font-weight: 700;
+  padding: 8px 10px;
+  border-radius: 9999px;
+}
+
+.pill-nav .nav-link:hover,
+.pill-nav .nav-link:focus {
+  color: var(--accent);
+}
+
+.pill-nav .nav-link.active {
+  color: var(--accent);
+}
+
+/* keep content visible under fixed nav */
+body { padding-top: 76px; }
+
+/* anchor offsets for smooth scroll targeting */
+#home, #about, #projects, #articles, #contact { scroll-margin-top: 84px; }
+
+@media (max-width: 640px) {
+  .pill-nav { gap: 16px; padding: 10px 14px; top: 10px; }
+  body { padding-top: 68px; }
+}
