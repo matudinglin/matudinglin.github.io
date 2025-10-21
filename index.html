@@ -40,11 +40,16 @@
               <p style="text-align:center">
                 <name>Yao Lin</name>
               </p>
-              <p>I am a computer science master student at <a href="https://www.usc.edu/">Universit of Southern California</a>. My interests include VR/AR, Software Development, Computer Graphics, Visualization and Game Development.
+              <p>
+                I'm a software and XR perception system engineer at <a href="https://www.qualcomm.com">Qualcomm</a>. who earned an M.S. in Computer Science from the <a href="https://www.usc.edu/">University of Southern California</a>. <br><br>
+                
+                I enjoy music, photography, coding, and outdoor sports.
+                Check out my guitar covers on the <a href="music.html">Music</a>. View my photos on the <a href="photos.html">Photos</a>.<br><br>
               </p>
+              <br>
               <p id="contact" style="text-align:center">
                 <a href="mailto:matudinglin@gmail.com">Email</a> &nbsp/&nbsp
-                <a href="data/resume.pdf">Resume</a> &nbsp/&nbsp
+                <!-- <a href="data/resume.pdf">Resume</a> &nbsp/&nbsp -->
                 <a href="data/Bio.txt">Bio</a> &nbsp/&nbsp
                 <a href="https://www.linkedin.com/in/matudinglin/">Linkedin</a> &nbsp/&nbsp
                 <a href="https://github.com/matudinglin/">Github</a>
@@ -69,13 +74,29 @@
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <!-- List Start -->
-          <tr onmouseout="hoverStop('qualcomm_image')" onmouseover="hoverStart('qualcomm_image')">
+         <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
-              <div class="one">
-                <div class="two" id='qualcomm_image'>
-                  <img src='images/qualcomm_after.png' width="160"></div>
-                <img src='images/qualcomm_before.jpg' width="160">
-              </div>
+              <img src='images/qualcomm_before.jpg' width="160" alt="Qualcomm experience thumbnail">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://www.qualcomm.com/home">
+                <papertitle>Qualcomm</papertitle>
+              </a>
+              <br>
+                Enigneer at XR Research Group
+              <br>
+                June 2024 – Present
+              <br>
+              <p></p>
+              <p>
+                Working in the Qualcomm XR Research Group for next-gen XR technologies.
+              </p>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img src='images/qualcomm_before.jpg' width="160" alt="Qualcomm experience thumbnail">
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://www.qualcomm.com/home">
@@ -84,23 +105,18 @@
               <br>
                 Multimedia Engineering Intern at XR Research Group
               <br>
-                May. 2023 – Aug. 2023
+                May 2023 – Aug 2023
               <br>
-      
               <p></p>
               <p>
-                Deisgned a XR application that provides an immersive visualization of XR perception algorithms’ internal workings.
+                Working in the Qualcomm XR Research Group for next-gen XR technologies.
               </p>
             </td>
           </tr>
 
-          <tr onmouseout="hoverStop('cviss_image')" onmouseover="hoverStart('cviss_image')">
+          <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
-              <div class="one">
-                <div class="two" id='cviss_image'>
-                  <img src='images/cviss_after.jpg' width="160"></div>
-                <img src='images/cviss_before.jpg' width="160">
-              </div>
+              <img src='images/cviss_before.jpg' width="160" alt="CViSS Lab experience thumbnail">
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://cviss.net/">
@@ -109,10 +125,8 @@
               <br>
                 Research Intern advised at CViSS Lab
               <br>
-                Jun. 2021 – Sept. 2021
+                Jun 2021 – Sept 2021
               <br>
-                <a href="https://m.youtube.com/watch?v=hIkH5lhEiF8">YouTube</a> &nbsp/&nbsp
-                <a href="https://github.com/matudinglin/Point-Cloud-Viewer">Github</a>
               <p></p>
               <p>
                 Designed a VR point cloud viewer using C# on Unity Engine and deployed it on Oculus Quest 2.
@@ -120,13 +134,9 @@
             </td>
           </tr>
 
-          <tr onmouseout="hoverStop('future_image')" onmouseover="hoverStart('future_image')">
+          <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
-              <div class="one">
-                <div class="two" id='future_image'>
-                  <img src='images/future_after.jpg' width="160"></div>
-                <img src='images/future_before.png' width="160">
-              </div>
+              <img src='images/future_before.png' width="160" alt="Tsinghua University experience thumbnail">
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://thfl.tsinghua.edu.cn/en/">
@@ -135,9 +145,8 @@
               <br>
                 Research Assistant Intern advised at The Future Laboratory
               <br>
-                Sept. 2021 – Dec. 2021  
+                Sept 2021 – Dec 2021  
               <br>
-                <a href="https://thfl.tsinghua.edu.cn/en/">Project</a>
               <p></p>
               <p>
                 Built an real-time non-destructive fruit quality detection system by analyzing spectrum data collected from spectrometer.
@@ -161,41 +170,7 @@
         <br>
         <br>
         <br>
-        <p id="last-updated" style="text-align:center;font-size:0.9em;color:#666;margin-top:6px;"></p>
-        
-        <script type="text/javascript">
-          // centralized hover helper for image overlays
-          (function(){
-            var ids = ['qualcomm_image','cviss_image','future_image','vivr_image','games_image','csci420_image','csci520_image','csci526_image','games103_image'];
-            window.hoverStart = function(id){
-              var el = document.getElementById(id);
-              if(el) el.style.opacity = '1';
-            };
-            window.hoverStop = function(id){
-              var el = document.getElementById(id);
-              if(el) el.style.opacity = '0';
-            };
-            // init overlays to 0
-            ids.forEach(function(id){ var el = document.getElementById(id); if(el) el.style.opacity='0'; });
-          })();
-        </script>
-        
-        <script type="text/javascript">
-          (function(){
-            var el = document.getElementById('last-updated');
-            var lm = document.lastModified;
-            if (lm) {
-              var d = new Date(lm);
-              if (!isNaN(d.getTime())) {
-                el.textContent = 'Last updated: ' + d.toLocaleDateString();
-                return;
-              }
-            }
-            // fallback to current date if document.lastModified is not reliable
-            var t = new Date();
-            el.textContent = 'Last updated: ' + t.toLocaleDateString();
-          })();
-        </script>
+        <p style="text-align:center;font-size:0.9em;color:#666;margin-top:6px;">Last updated: 2024</p>
 
       </td>
     </tr>
