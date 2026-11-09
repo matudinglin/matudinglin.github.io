@@ -96,9 +96,10 @@ strong {
   font-size: 14px;
 }
 
-heading {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+.page-heading {
+  margin: 0;
   font-size: 22px;
+  font-weight: 400;
 }
 
 papertitle {
@@ -107,9 +108,11 @@ papertitle {
   font-weight: 700
 }
 
-name {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+.site-name {
+  margin: 14px 0;
   font-size: 32px;
+  font-weight: 400;
+  text-align: center;
 }
 
 .one {
