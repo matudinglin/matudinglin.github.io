@@ -143,7 +143,7 @@ html {
 }
 
 :root {
-  --accent: #00bfa6; /* teal accent */
+  --accent: #006b5f;
   --edge-color: #F8F8F8; /* subtle mint edge */
 }
 
@@ -177,12 +177,19 @@ html {
 }
 
 .pill-nav .nav-link:hover,
-.pill-nav .nav-link:focus {
+.pill-nav .nav-link:focus-visible,
+.pill-nav .nav-link[aria-current="page"] {
   color: var(--accent);
 }
 
-.pill-nav .nav-link.active {
-  color: var(--accent);
+.pill-nav .nav-link[aria-current="page"] {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.pill-nav .nav-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 /* keep content visible under fixed nav */
